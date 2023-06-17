@@ -8,7 +8,6 @@ const https=require("https");
  app.get("/", function(req,res){
    res.sendFile(__dirname+"/index.html")
 });
-
 app.post("/",function(req,res){
 const query = req.body.CityName
 const apikey= "ce0152ac08b96fed05ccde97f5dbb284";
@@ -27,7 +26,6 @@ https.get(url,function(response){
      res.write("\n and it seems that it is </hi>  "+description)
      res.write("<img src="+icon_url+">")
      res.send()
-
   })
 })
 });
